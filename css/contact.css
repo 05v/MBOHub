@@ -1,0 +1,223 @@
+:root {
+    --primary-purple: #2d1741;
+    --secondary-purple: #5e3289;
+    --accent-red: #e03345;
+    --text-gray: #4b5563;
+    --text-white: #ffffff;
+    --bg-white: #ffffff;
+    --bg-light: #fbfbfb;
+    --shadow-color: rgba(0, 0, 0, 0.05);
+    --border-color: #e5e7eb;
+}
+
+.contact-hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--bg-white);
+}
+
+.contact-hero h1 {
+    font-family: 'Gopher Black', sans-serif;
+    color: var(--secondary-purple);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-hero p {
+    font-family: 'Gopher Regular', sans-serif;
+    color: var(--text-gray);
+    font-size: 1.25rem;
+    margin: 0 auto;
+}
+
+.contact-content {
+    background-color: var(--bg-light);
+    padding: 6rem 2rem;
+}
+
+.contact-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    align-items: stretch;
+    padding: 0 2rem;
+}
+
+.contact-page-form {
+    background: var(--bg-white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.contact-page-form h2, 
+.contact-page-card h2 {
+    font-family: 'Gopher Black', sans-serif;
+    color: var(--text-gray);
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.contact-page-form p, 
+.contact-page-card p {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.contact-form-group {
+    margin-bottom: 1.25rem;
+}
+
+.contact-input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: 'Gopher Regular', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact-input:focus {
+    outline: none;
+    border-color: var(--secondary-purple);
+}
+
+textarea.contact-input {
+    min-height: 180px;
+    resize: vertical;
+}
+
+.contact-submit-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--secondary-purple);
+    color: var(--text-white);
+    border: none;
+    border-radius: 8px;
+    font-family: 'Gopher Regular', sans-serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-submit-button:hover {
+    background-color: var(--primary-purple);
+}
+
+.contact-page-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.contact-page-card {
+    background: var(--bg-white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    width: 100%;
+    box-sizing: border-box;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.contact-page-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.contact-page-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-gray);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.contact-page-item:hover {
+    color: var(--secondary-purple);
+}
+
+.contact-page-item i {
+    color: var(--secondary-purple);
+    font-size: 1.4rem;
+    width: 24px;
+    text-align: center;
+}
+
+.contact-page-social {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.contact-page-social a {
+    color: var(--text-gray);
+    font-size: 1.75rem;
+    transition: color 0.3s ease;
+}
+
+.contact-page-social a:hover {
+    color: var(--secondary-purple);
+}
+
+.project-card {
+    margin-top: auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-project-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--accent-red);
+    color: var(--text-white);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-project-button:hover {
+    background-color: #c62c3b;
+}
+
+@media (max-width: 768px) {
+    .contact-page-container {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .contact-content {
+        padding: 4rem 1rem;
+    }
+
+    .contact-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-hero p {
+        font-size: 1.1rem;
+    }
+
+    .contact-page-form, 
+    .contact-page-card {
+        padding: 2rem;
+    }
+} 

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evenementenkalender - MBO HUB Amsterdam</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/calendar.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="../js/navigation.js" defer></script>
+    <script src="../js/animations.js" defer></script>
+    <script src="../js/calendar.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="../assets/Logo.webp" alt="MBO HUB Amsterdam Logo">
+            </a>
+            <nav class="main-nav">
+                <button class="burger-menu" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/projecten">Projecten</a></li>
+                    <li><a href="/kalender">Kalender</a></li>
+                    <li><a href="/over-ons">Over Ons</a></li>
+                    <li><a href="/skills">Skills</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="calendar-hero">
+            <h1 class="fade-in">Evenementenkalender</h1>
+            <p class="fade-in">Bekijk en filter aankomende evenementen en activiteiten</p>
+        </section>
+
+        <section class="calendar-content">
+            <div class="container">
+                <div class="calendar-layout">
+                    <div class="calendar-sidebar fade-in-left">
+                        <div class="calendar-widget">
+                            <div class="calendar-header">
+                                <button class="month-nav" id="prevMonth">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <h2>Januari 2025</h2>
+                                <button class="month-nav" id="nextMonth">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="calendar-grid">
+                                <!-- Calendar will be populated by JS -->
+                            </div>
+                        </div>
+
+                        <div class="filter-section">
+                            <h3>Filter op Type</h3>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="checkbox" checked>
+                                    <span></span>
+                                    Workshop
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" checked>
+                                    <span></span>
+                                    Presentatie
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" checked>
+                                    <span></span>
+                                    Netwerkevent
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" checked>
+                                    <span></span>
+                                    Excursie
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" checked>
+                                    <span></span>
+                                    Gastcollege
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="events-list fade-in-right">
+                        <div class="event-card">
+                            <div class="event-tag">workshop</div>
+                            <h3>Workshop Design Thinking</h3>
+                            <div class="event-details">
+                                <p><i class="far fa-calendar"></i> vrijdag 10 januari 2025</p>
+                                <p><i class="fas fa-location-dot"></i> MBO College Zuidoost</p>
+                            </div>
+                            <p class="event-description">Leer de basics van design thinking in deze interactieve workshop.</p>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-tag">presentatie</div>
+                            <h3>Project Presentaties</h3>
+                            <div class="event-details">
+                                <p><i class="far fa-calendar"></i> maandag 20 januari 2025</p>
+                                <p><i class="fas fa-location-dot"></i> ROC van Amsterdam</p>
+                            </div>
+                            <p class="event-description">Studenten presenteren hun laatste projecten.</p>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-tag">netwerkevent</div>
+                            <h3>Netwerkevent met Bedrijven</h3>
+                            <div class="event-details">
+                                <p><i class="far fa-calendar"></i> zaterdag 25 januari 2025</p>
+                                <p><i class="fas fa-location-dot"></i> House of Skills</p>
+                            </div>
+                            <p class="event-description">Ontmoet potentiële werkgevers en partners.</p>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-tag">excursie</div>
+                            <h3>Excursie Medialab</h3>
+                            <div class="event-details">
+                                <p><i class="far fa-calendar"></i> woensdag 5 februari 2025</p>
+                                <p><i class="fas fa-location-dot"></i> MediaLab Amsterdam</p>
+                            </div>
+                            <p class="event-description">Bezoek aan een innovatief medialab om de nieuwste technologieën te ontdekken.</p>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-tag">gastcollege</div>
+                            <h3>Gastcollege Digital Marketing</h3>
+                            <div class="event-details">
+                                <p><i class="far fa-calendar"></i> woensdag 12 februari 2025</p>
+                                <p><i class="fas fa-location-dot"></i> MBO College Centrum</p>
+                            </div>
+                            <p class="event-description">Een expert uit het werkveld deelt zijn ervaringen en inzichten.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="contact-info">
+                    <i class="fa-regular fa-envelope"></i>
+                    <a href="mailto:info@mbo-hub.amsterdam">info@mbo-hub.amsterdam</a>
+                </div>
+                <p>Ben je benieuwd wat mbo-studenten voor jouw project kunnen betekenen? Neem contact met ons op!</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Links</h3>
+                <div class="footer-links">
+                    <a href="/over-ons">Over Ons</a>
+                    <a href="/projecten">Projecten</a>
+                    <a href="/contact">Contact</a>
+                    <a href="/privacy-policy">Privacy Policy</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Volg ons</h3>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/mbo-hub-amsterdam/" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mbohub.amsterdam/" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@MBO-Hub" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            © 2025 MBO-Hub Amsterdam. Alle rechten voorbehouden.
+        </div>
+    </footer>
+</body>
+</html> 

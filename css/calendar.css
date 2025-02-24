@@ -1,0 +1,250 @@
+:root {
+    --primary-purple: #2d1741;
+    --secondary-purple: #5e3289;
+    --accent-red: #e03345;
+    --text-gray: #4b5563;
+    --text-white: #ffffff;
+    --bg-white: #ffffff;
+    --bg-light: #fbfbfb;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.calendar-hero {
+    background-color: var(--primary-purple);
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.calendar-hero h1 {
+    color: var(--text-white);
+    font-family: 'Gopher Black', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.calendar-hero p {
+    color: var(--text-white);
+    font-family: 'Gopher Regular', sans-serif;
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.calendar-content {
+    padding: 4rem 2rem;
+    background-color: var(--bg-light);
+}
+
+.calendar-layout {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 3rem;
+}
+
+.calendar-sidebar {
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+}
+
+.calendar-widget {
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    margin-bottom: 2rem;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.calendar-header h2 {
+    font-family: 'Gopher Black', sans-serif;
+    color: var(--text-gray);
+    font-size: 1.25rem;
+}
+
+.month-nav {
+    background: none;
+    border: none;
+    color: var(--secondary-purple);
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.filter-section {
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.filter-section h3 {
+    font-family: 'Gopher Black', sans-serif;
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-gray);
+    font-family: 'Gopher Regular', sans-serif;
+    cursor: pointer;
+    padding: 0.5rem 0;
+}
+
+/* Hide default checkbox */
+.filter-option input[type="checkbox"] {
+    display: none;
+}
+
+/* Custom checkbox */
+.filter-option input[type="checkbox"] + span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--secondary-purple);
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+/* Checkmark */
+.filter-option input[type="checkbox"] + span::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--text-white);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg) scale(0);
+    opacity: 0;
+    transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46);
+}
+
+/* Checked state */
+.filter-option input[type="checkbox"]:checked + span {
+    background: var(--secondary-purple);
+    border-color: var(--secondary-purple);
+}
+
+.filter-option input[type="checkbox"]:checked + span::after {
+    transform: rotate(45deg) scale(1);
+    opacity: 1;
+}
+
+/* Hover effect */
+.filter-option:hover input[type="checkbox"] + span {
+    border-color: var(--secondary-purple);
+    box-shadow: 0 0 0 3px rgba(94, 50, 137, 0.1);
+}
+
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.event-card {
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+}
+
+.event-tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-purple);
+    color: var(--text-white);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    font-family: 'Gopher Regular', sans-serif;
+}
+
+.event-card h3 {
+    font-family: 'Gopher Black', sans-serif;
+    color: var(--text-gray);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.event-details p {
+    color: var(--text-gray);
+    font-family: 'Gopher Regular', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.event-description {
+    color: var(--text-gray);
+    font-family: 'Gopher Regular', sans-serif;
+    line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+    .calendar-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .calendar-sidebar {
+        position: static;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .calendar-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .calendar-hero p {
+        font-size: 1.1rem;
+    }
+
+    .event-card {
+        padding: 1.5rem;
+    }
+} 
