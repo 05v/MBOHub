@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - MBO HUB Amsterdam</title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="/js/navigation.js" defer></script>
+    <script src="/js/animations.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="/assets/Logo.webp" alt="MBO HUB Amsterdam Logo">
+            </a>
+            <nav class="main-nav">
+                <button class="burger-menu" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/projecten">Projecten</a></li>
+                    <li><a href="/kalender">Kalender</a></li>
+                    <li><a href="/over-ons">Over Ons</a></li>
+                    <li><a href="/skills">Skills</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="admin-dashboard fade-in">
+            <div class="admin-container">
+                <div class="admin-header">
+                    <h1>Content Beheer</h1>
+                    <button id="logoutButton" class="logout-button">Uitloggen</button>
+                </div>
+
+                <div class="page-selector">
+                    <label for="pageSelect">Selecteer pagina om te bewerken:</label>
+                    <select id="pageSelect" class="page-select">
+                        <option value="home">Home</option>
+                        <option value="projecten">Projecten</option>
+                        <option value="kalender">Kalender</option>
+                        <option value="over-ons">Over Ons</option>
+                        <option value="skills">Skills</option>
+                        <option value="contact">Contact</option>
+                    </select>
+                </div>
+
+                <!-- Home Page Content -->
+                <div class="admin-content" id="homeContent">
+                    <div class="edit-section">
+                        <h2>Hero Sectie</h2>
+                        <div class="section-preview">
+                            <span class="section-label">Bovenaan de pagina met paarse achtergrond</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="heroTitle">Hero Titel</label>
+                            <textarea id="heroTitle" rows="2">Samen bouwen we aan de toekomst van Amsterdam!</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="heroSubtitle">Hero Subtitel</label>
+                            <textarea id="heroSubtitle" rows="2">Verbinden van talent, innovatie en ondernemerschap in het hart van Amsterdam</textarea>
+                        </div>
+                    </div>
+
+                    <div class="edit-section">
+                        <h2>CTA Knoppen</h2>
+                        <div class="section-preview">
+                            <span class="section-label">De twee knoppen in de hero sectie</span>
+                        </div>
+                        <div class="cta-edit">
+                            <h3>Primaire CTA</h3>
+                            <div class="form-group">
+                                <label for="ctaPrimaryText">Tekst</label>
+                                <input type="text" id="ctaPrimaryText" value="Bekijk onze projecten">
+                            </div>
+                            <div class="form-group">
+                                <label for="ctaPrimaryLink">Link</label>
+                                <input type="text" id="ctaPrimaryLink" value="/projecten">
+                            </div>
+                        </div>
+
+                        <div class="cta-edit">
+                            <h3>Secundaire CTA</h3>
+                            <div class="form-group">
+                                <label for="ctaSecondaryText">Tekst</label>
+                                <input type="text" id="ctaSecondaryText" value="Contact opnemen">
+                            </div>
+                            <div class="form-group">
+                                <label for="ctaSecondaryLink">Link</label>
+                                <input type="text" id="ctaSecondaryLink" value="/contact">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="edit-section">
+                        <h2>Introductie Sectie</h2>
+                        <div class="section-preview">
+                            <span class="section-label">Eerste sectie onder de hero</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="introTitle">Titel</label>
+                            <textarea id="introTitle" rows="2">MBO-Hub Amsterdam</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="introText">Tekst</label>
+                            <textarea id="introText" rows="3">MBO-Hub Amsterdam is een samenwerking tussen ROC van Amsterdam, Mediacollege Amsterdam en HMC, opgericht in het kader van Amsterdam 750.</textarea>
+                        </div>
+                    </div>
+
+                    <div class="edit-section">
+                        <h2>Informatie Kaarten</h2>
+                        <div class="section-preview">
+                            <span class="section-label">De drie kaarten onder de introductietekst</span>
+                        </div>
+                        
+                        <div class="card-edit">
+                            <h3>Kaart 1</h3>
+                            <div class="form-group">
+                                <label for="card1Title">Titel</label>
+                                <textarea id="card1Title" rows="2">MBO-Hub Team & Partners</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="card1Text">Tekst</label>
+                                <textarea id="card1Text" rows="3">Ontdek ons team en de toonaangevende partners waarmee we samenwerken om innovatie in het MBO mogelijk te maken.</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="card1Link">Link</label>
+                                <input type="text" id="card1Link" value="/over-ons">
+                            </div>
+                        </div>
+
+                        <div class="card-edit">
+                            <h3>Kaart 2</h3>
+                            <div class="form-group">
+                                <label for="card2Title">Titel</label>
+                                <textarea id="card2Title" rows="2">Projecten</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="card2Text">Tekst</label>
+                                <textarea id="card2Text" rows="3">Bekijk de innovatieve projecten waar MBO-studenten en bedrijven samen aan werken.</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="card2Link">Link</label>
+                                <input type="text" id="card2Link" value="/projecten">
+                            </div>
+                        </div>
+
+                        <div class="card-edit">
+                            <h3>Kaart 3</h3>
+                            <div class="form-group">
+                                <label for="card3Title">Titel</label>
+                                <textarea id="card3Title" rows="2">Kalender</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="card3Text">Tekst</label>
+                                <textarea id="card3Text" rows="3">Blijf op de hoogte van de laatste ontwikkelingen, succesverhalen en aankomende events.</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="card3Link">Link</label>
+                                <input type="text" id="card3Link" value="/kalender">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="edit-section">
+                        <h2>Video Sectie</h2>
+                        <div class="section-preview">
+                            <span class="section-label">YouTube video sectie</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="videoTitle">Titel boven video</label>
+                            <textarea id="videoTitle" rows="2">Ontdek MBO-Hub Amsterdam</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="videoUrl">YouTube Video ID</label>
+                            <input type="text" id="videoUrl" value="kwZH1llzlCM">
+                            <span class="help-text">Voer alleen de ID in (bijvoorbeeld: kwZH1llzlCM van https://www.youtube.com/watch?v=kwZH1llzlCM)</span>
+                        </div>
+                    </div>
+
+                    <button id="saveButton" class="save-button">Wijzigingen Opslaan</button>
+                    <p id="successMessage" class="success-message"></p>
+                </div>
+
+                <!-- Projects Page Content -->
+                <div class="admin-content" id="projectenContent" style="display: none;">
+                    <div class="edit-section">
+                        <h2>Projecten Pagina</h2>
+                        <div class="section-preview">
+                            <span class="section-label">Content voor de projecten pagina</span>
+                        </div>
+                        <p class="empty-state">Deze sectie wordt binnenkort toegevoegd.</p>
+                    </div>
+                </div>
+
+                <!-- Calendar Page Content -->
+                <div class="admin-content" id="kalenderContent" style="display: none;">
+                    <div class="edit-section">
+                        <h2>Kalender Pagina</h2>
+                        <div class="section-preview">
+                            <span class="section-label">Content voor de kalender pagina</span>
+                        </div>
+                        <p class="empty-state">Deze sectie wordt binnenkort toegevoegd.</p>
+                    </div>
+                </div>
+
+                <!-- About Us Page Content -->
+                <div class="admin-content" id="over-onsContent" style="display: none;">
+                    <div class="edit-section">
+                        <h2>Over Ons Pagina</h2>
+                        <div class="section-preview">
+                            <span class="section-label">Content voor de over ons pagina</span>
+                        </div>
+                        <p class="empty-state">Deze sectie wordt binnenkort toegevoegd.</p>
+                    </div>
+                </div>
+
+                <!-- Skills Page Content -->
+                <div class="admin-content" id="skillsContent" style="display: none;">
+                    <div class="edit-section">
+                        <h2>Skills Pagina</h2>
+                        <div class="section-preview">
+                            <span class="section-label">Content voor de skills pagina</span>
+                        </div>
+                        <p class="empty-state">Deze sectie wordt binnenkort toegevoegd.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Page Content -->
+                <div class="admin-content" id="contactContent" style="display: none;">
+                    <div class="edit-section">
+                        <h2>Hero Sectie</h2>
+                        <div class="section-preview">
+                            <span class="section-label">Bovenaan de contact pagina</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactHeroTitle">Titel</label>
+                            <textarea id="contactHeroTitle" rows="2">Neem Contact Op</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactHeroText">Beschrijving</label>
+                            <textarea id="contactHeroText" rows="3">Heb je vragen of wil je meer weten over MBO-Hub Amsterdam? Neem gerust contact met ons op.</textarea>
+                        </div>
+                    </div>
+
+                    <div class="edit-section">
+                        <h2>Contact Informatie</h2>
+                        <div class="section-preview">
+                            <span class="section-label">Contact gegevens sectie</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactInfoTitle">Titel</label>
+                            <input type="text" id="contactInfoTitle" value="Contactgegevens">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactInfoText">Subtitel</label>
+                            <input type="text" id="contactInfoText" value="Je kunt ons bereiken via:">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email</label>
+                            <input type="text" id="contactEmail" value="info@mbo-hub.amsterdam">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">Telefoonnummer</label>
+                            <input type="text" id="contactPhone" value="020 - XXX XXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactLocation">Locatie</label>
+                            <input type="text" id="contactLocation" value="Amsterdam, Nederland">
+                        </div>
+                    </div>
+
+                    <div class="edit-section">
+                        <h2>Sociale Media Sectie</h2>
+                        <div class="section-preview">
+                            <span class="section-label">Sociale media informatie</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="socialTitle">Titel</label>
+                            <input type="text" id="socialTitle" value="Volg ons">
+                        </div>
+                        <div class="form-group">
+                            <label for="socialText">Beschrijving</label>
+                            <input type="text" id="socialText" value="Blijf op de hoogte via onze sociale media">
+                        </div>
+                    </div>
+
+                    <div class="edit-section">
+                        <h2>Project Aanmelden Sectie</h2>
+                        <div class="section-preview">
+                            <span class="section-label">Project aanmelden CTA</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="projectTitle">Titel</label>
+                            <input type="text" id="projectTitle" value="Project aandragen?">
+                        </div>
+                        <div class="form-group">
+                            <label for="projectText">Beschrijving</label>
+                            <textarea id="projectText" rows="2">Heb je een interessant project voor onze studenten?</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="projectButtonText">Button Tekst</label>
+                            <input type="text" id="projectButtonText" value="Draag een project aan">
+                        </div>
+                        <div class="form-group">
+                            <label for="projectButtonHref">Button Link</label>
+                            <input type="text" id="projectButtonHref" value="mailto:info@mbo-hub.amsterdam">
+                        </div>
+                    </div>
+
+                    <button id="saveContactButton" class="save-button">Wijzigingen Opslaan</button>
+                    <p id="contactSuccessMessage" class="success-message"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="contact-info">
+                    <i class="fa-regular fa-envelope"></i>
+                    <a href="mailto:info@mbo-hub.amsterdam">info@mbo-hub.amsterdam</a>
+                </div>
+                <p>Ben je benieuwd wat mbo-studenten voor jouw project kunnen betekenen? Neem contact met ons op!</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Links</h3>
+                <div class="footer-links">
+                    <a href="/over-ons">Over Ons</a>
+                    <a href="/projecten">Projecten</a>
+                    <a href="/contact">Contact</a>
+                    <a href="/privacy-policy">Privacy Policy</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Volg ons</h3>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/mbo-hub-amsterdam/" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mbohub.amsterdam/" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@MBO-Hub" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            © 2025 MBO-Hub Amsterdam. Alle rechten voorbehouden.
+        </div>
+    </footer>
+
+    <script src="/js/admin.js"></script>
+</body>
+</html> 

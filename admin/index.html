@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - MBO HUB Amsterdam</title>
-    <link rel="stylesheet" href="/css/contact.css">
+    <title>Admin Login - MBO HUB Amsterdam</title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/admin.css">
     <link rel="stylesheet" href="/css/animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="/js/navigation.js" defer></script>
     <script src="/js/animations.js" defer></script>
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <script src="/js/contact.js" defer></script>
 </head>
 <body>
     <header>
@@ -38,54 +37,22 @@
     </header>
 
     <main>
-        <section class="contact-hero fade-in">
-            <h1>Contact</h1>
-            <p>Heb je een vraag of wil je een project aandragen? Neem contact met ons op!</p>
-        </section>
-
-        <section class="contact-content">
-            <div class="contact-page-container">
-                <div class="contact-page-sidebar">
-                    <div class="contact-page-card fade-in-right">
-                        <h2>Contactgegevens</h2>
-                        <p>Je kunt ons bereiken via:</p>
-                        <div class="contact-page-details">
-                            <a href="mailto:info@mbo-hub.nl" class="contact-page-item email-info">
-                                <i class="fa-regular fa-envelope"></i>
-                                info@mbo-hub.nl
-                            </a>
-                            <a href="tel:020XXXXXXX" class="contact-page-item phone-info">
-                                <i class="fa-solid fa-phone"></i>
-                                020 - XXX XXXX
-                            </a>
-                            <span class="contact-page-item location-info">
-                                <i class="fa-solid fa-location-dot"></i>
-                                Amsterdam, Nederland
-                            </span>
+        <section class="admin-login fade-in">
+            <div class="container">
+                <div class="login-card">
+                    <h1>Admin Login</h1>
+                    <form id="loginForm" class="login-form">
+                        <div class="form-group">
+                            <label for="username">Gebruikersnaam</label>
+                            <input type="text" id="username" name="username" required>
                         </div>
-                    </div>
-
-                    <div class="contact-page-card social-section fade-in-right" style="animation-delay: 0.2s;">
-                        <h2>Volg ons</h2>
-                        <p>Blijf op de hoogte via onze sociale media</p>
-                        <div class="contact-page-social">
-                            <a href="https://www.linkedin.com/company/mbo-hub-amsterdam/" target="_blank" rel="noopener">
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://www.instagram.com/mbohub.amsterdam/" target="_blank" rel="noopener">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="https://www.youtube.com/@MBO-Hub" target="_blank" rel="noopener">
-                                <i class="fa-brands fa-youtube"></i>
-                            </a>
+                        <div class="form-group">
+                            <label for="password">Wachtwoord</label>
+                            <input type="password" id="password" name="password" required>
                         </div>
-                    </div>
-
-                    <div class="contact-page-card project-card fade-in-right" style="animation-delay: 0.4s;">
-                        <h2>Project aandragen?</h2>
-                        <p>Heb je een interessant project voor onze studenten?</p>
-                        <a href="mailto:info@mbo-hub.amsterdam" class="contact-project-button">Draag een project aan</a>
-                    </div>
+                        <button type="submit">Inloggen</button>
+                    </form>
+                    <p id="loginError" class="error-message"></p>
                 </div>
             </div>
         </section>
@@ -132,5 +99,7 @@
             © 2025 MBO-Hub Amsterdam. Alle rechten voorbehouden.
         </div>
     </footer>
+
+    <script src="/js/admin.js"></script>
 </body>
 </html> 
