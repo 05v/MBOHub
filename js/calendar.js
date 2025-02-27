@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 0; i < firstDay.getDay(); i++) {
             const emptyDay = document.createElement('div');
             emptyDay.className = 'calendar-day empty';
+            emptyDay.setAttribute('aria-hidden', 'true');
             calendarGrid.appendChild(emptyDay);
         }
 
@@ -53,6 +54,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             calendarGrid.appendChild(dayEl);
+        }
+
+        // Add empty days for next month if needed
+        const totalDays = firstDay.getDay() + lastDay.getDate();
+        const remainingDays = 42 - totalDays; // 6 rows × 7 days = 42
+        for (let i = 0; i < remainingDays; i++) {
+            const emptyDay = document.createElement('div');
+            emptyDay.className = 'calendar-day empty';
+            emptyDay.setAttribute('aria-hidden', 'true');
+            calendarGrid.appendChild(emptyDay);
         }
 
         monthDisplay.textContent = `${months[currentDate.getMonth()]} ${currentDate.getFullYear()}`;

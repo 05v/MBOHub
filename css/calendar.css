@@ -112,12 +112,14 @@
     margin: 0 auto;
 }
 
-.calendar-day:hover {
+.calendar-day:not(.empty):hover {
     background-color: rgba(94, 50, 137, 0.1);
 }
 
 .calendar-day.empty {
     cursor: default;
+    color: transparent;
+    pointer-events: none;
 }
 
 .calendar-day.has-event::after {
