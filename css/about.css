@@ -36,6 +36,10 @@
     margin-bottom: 2rem;
 }
 
+.section-title-2{
+    padding-top: 3rem;
+}
+
 .mission-section {
     background-color: var(--bg-white);
     padding: 6rem 2rem;
